@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Challenge Accepted</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div id="master">
+      <div id="table">
+        <div id="message">
+          <h2>Press Start Button to Play<br />Don't Forget to bet first!</h2>
+        </div>
+        <div id="start">
+          <button id="btnstart" type="button" onclick="Start()" class="btn">
+            Start Game
+          </button>
+        </div>
+        <div id="output">
+          Dealer Hand : <span id="dealerValue"></span>
+          <div id="dealer-hand"></div>
+          Player Hand : <span id="playerValue"></span>
+          <div id="player-hand"></div>
+          <div id="player-actions">
+            <button
+              id="btnStay"
+              type="button"
+              onclick='cardAction("hold")'
+              class="btn"
+            >
+              Stay
+            </button>
+            <button
+              id="btnHit"
+              type="button"
+              onclick='cardAction("hit")'
+              class="btn"
+            >
+              Hit
+            </button>
+            <button
+              id="btnDouble"
+              type="button"
+              onclick='cardAction("double")'
+              class="btn"
+            >
+              Double
+            </button>
+          </div>
+          <div>
+            <button id="btnDeal" type="button" onclick="dealNew()" class="btn">
+              Deal
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div id="func">
+        <div id="total">Bank Total $<span id="dollars">100</span></div>
+        <div id="bets">
+          Bet Amount $<input
+            type="number"
+            id="playerbet"
+            value="5"
+            min="1"
+            max="100"
+          />
+          <button
+            id="maxbet"
+            type="button"
+            onclick="maxBet()"
+            class="btn"
+            max="100"
+          >
+            Max Bet
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
