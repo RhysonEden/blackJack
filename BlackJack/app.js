@@ -1,6 +1,7 @@
 // I wrote this code to try and show a little of everything we
 // were taught I was able to actually retain, plus leaning more
 // heavily on base JS.
+//
 
 let cards = [];
 let playerCard = [];
@@ -20,7 +21,7 @@ let endPlay = false;
 let payoutJack = 1;
 let dollarValue = document.getElementById("dollars");
 
-document.getElementById("playerbet").onchange = function() {
+document.getElementById("playerbet").onchange = function () {
   if ($(this).val() < 0) {
     $(this).val() = 0;
   }
@@ -50,7 +51,7 @@ for (s in suits) {
       icon: suits[s],
       bgcolor: bgcolor,
       cardnum: numb[n],
-      cardvalue: cardValue
+      cardvalue: cardValue,
     };
     cards.push(card);
   }
